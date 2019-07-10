@@ -1,7 +1,1 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Book.create(name: 'Fahrenheit 451', description: 'In a future dystopian society, all printed materials have been banned. Enforced by the fire department - whose role it is to burn books - the attempt to create an emotionless, egalitarian society has been taken to an extreme. Guy Montag is a senior fireman who is much respected by his superiors and is in line for a promotion. He does not question what he does or why he does it until he meets Clarisse. As his doubts grow, he begins to steal some of the books he is meant to burn.', author: 'Ray Bradbury')
