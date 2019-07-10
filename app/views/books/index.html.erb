@@ -1,10 +1,9 @@
 <% @books.each do |book| %>
-  <div>
-    <h1><%= book.name %></h1><br />
-    <i><%= book.author %></i><br />
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= book.name %></h1>
+    <i><%= book.author %></i><br /><br />
     <p><%= book.description %></p><br />
   </div>
 
 
-  <hr />
 <% end %>
