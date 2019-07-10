@@ -1,1 +1,10 @@
-<h1>Welcome to my Awesome Web App</h1>
+<% @books.each do |book| %>
+  <div>
+    <h1><%= book.name %></h1><br />
+    <i><%= book.author %></i><br />
+    <p><%= book.description %></p><br />
+  </div>
+
+
+  <hr />
+<% end %>
