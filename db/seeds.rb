@@ -1,1 +1,6 @@
+user1 = User.find_by(email: 'morgansmith0219@gmail.com')
+
+
 Book.create(name: 'Fahrenheit 451', description: 'In a future dystopian society, all printed materials have been banned. Enforced by the fire department - whose role it is to burn books - the attempt to create an emotionless, egalitarian society has been taken to an extreme. Guy Montag is a senior fireman who is much respected by his superiors and is in line for a promotion. He does not question what he does or why he does it until he meets Clarisse. As his doubts grow, he begins to steal some of the books he is meant to burn.', author: 'Ray Bradbury')
+Book.create(name: 'Hard Times', description: 'First published in 1854, ''Hard Times'' centers on the Gradgrind family. The members of this family--as well as others inhabiting fictional Coketown--shift their philosophies and romantic entanglement as the plot unfolds.', author: 'Charles Dickens')
+Book.create(name: 'Animal Farm', description: 'Animal Farm, written by George Orwell, is an allegorical story about the Soviet Union in the early years. At the beginning of the story, Old Major inspires his fellow farm animals to revolt against their human master, Mr. Jones, owner of Manor Farm. Leaders of the animal revolt include two pigs, Napoleon and Snowball.')
