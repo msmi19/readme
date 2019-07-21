@@ -4,7 +4,9 @@
     <h1><%= book.name %></h1>
     <i><%= book.author %></i><br /><br />
     <p><%= book.description %></p><br />
+
+    <% if book.user.present? %>
+      <small><%= book.user.email %></small>
+    <% end%>
   </div>
-
-
 <% end %>
