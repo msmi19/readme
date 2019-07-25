@@ -1,10 +1,9 @@
 <%= will_paginate @books %>
 <% @books.each do |book| %>
   <div class="booyah-box col-10 offset-1">
-    <h1><%= book.name %></h1>
+    <h1><%= link_to book.name, book_path(book) %></h1><br />
     <i><%= book.author %></i><br /><br />
     <p><%= book.description %></p><br />
-
     <% if book.user.present? %>
       <small><%= book.user.email %></small>
     <% end%>

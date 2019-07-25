@@ -14,6 +14,30 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def update
+    @book = Book.find(params[:id])
+    @book.update_attributes(book_params)
+    redirect_to root_path
+  end
+
+  def destroy 
+    @book = Book.find(params[:id])
+    if @book.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+
+    @book.destroy
+    redirect_to root_path
+  end
+
   private
 
   def book_params
