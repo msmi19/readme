@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index 
     @books = Book.paginate(page: params[:page])
@@ -20,10 +20,18 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
-  end
+
+    if @book.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+end
 
   def update
     @book = Book.find(params[:id])
+    if @book.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+
     @book.update_attributes(book_params)
     redirect_to root_path
   end
